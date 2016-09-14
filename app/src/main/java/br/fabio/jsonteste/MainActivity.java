@@ -28,5 +28,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ler(View v){
+        String json = "[" +
+                "    {\"usuario\":\"John\", \"senha\":\"Doe\"}," +
+                "    {\"usuario\":\"Anna\", \"senha\":\"Smith\"}," +
+                "    {\"usuario\":\"Peter\",\"senha\":\"Jones\"}" +
+                "]";
     }
 }
