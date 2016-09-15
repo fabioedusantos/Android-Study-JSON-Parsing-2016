@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView lblUsuario1;
@@ -33,5 +36,10 @@ public class MainActivity extends AppCompatActivity {
                 "    {\"usuario\":\"Anna\", \"senha\":\"Smith\"}," +
                 "    {\"usuario\":\"Peter\",\"senha\":\"Jones\"}" +
                 "]";
+
+        try {
+            JSONArray jsonArray = new JSONArray(json);
+        } catch (final JSONException e){
+        }
     }
 }
