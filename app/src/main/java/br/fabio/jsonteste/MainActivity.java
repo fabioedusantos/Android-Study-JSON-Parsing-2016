@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             JSONArray jsonArray = new JSONArray(json);
+
+            for(int i = 0; i < jsonArray.length(); i++){
+                JSONObject jsonObj = jsonArray.getJSONObject(i);
+            }
         } catch (final JSONException e){
         }
     }
