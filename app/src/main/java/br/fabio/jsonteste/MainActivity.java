@@ -43,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
 
             for(int i = 0; i < jsonArray.length(); i++){
                 JSONObject jsonObj = jsonArray.getJSONObject(i);
+
+                if(i == 0){
+                    lblUsuario1.setText(jsonObj.getString("usuario"));
+                    lblSenha1.setText(jsonObj.getString("senha"));
+                }
             }
         } catch (final JSONException e){
         }
