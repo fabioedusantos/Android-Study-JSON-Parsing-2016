@@ -44,9 +44,19 @@ public class MainActivity extends AppCompatActivity {
             for(int i = 0; i < jsonArray.length(); i++){
                 JSONObject jsonObj = jsonArray.getJSONObject(i);
 
-                if(i == 0){
-                    lblUsuario1.setText(jsonObj.getString("usuario"));
-                    lblSenha1.setText(jsonObj.getString("senha"));
+                switch (i){
+                    case 0:
+                        lblUsuario1.setText(jsonObj.getString("usuario"));
+                        lblSenha1.setText(jsonObj.getString("senha"));
+                        break;
+                    case 1:
+                        lblUsuario2.setText(jsonObj.getString("usuario"));
+                        lblSenha2.setText(jsonObj.getString("senha"));
+                        break;
+                    case 2:
+                        lblUsuario3.setText(jsonObj.getString("usuario"));
+                        lblSenha3.setText(jsonObj.getString("senha"));
+                        break;
                 }
             }
         } catch (final JSONException e){
